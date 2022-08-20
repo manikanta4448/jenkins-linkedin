@@ -21,18 +21,18 @@ pipeline {
         }
         stage('Relative path') {
             steps {
-                sh("./jenkins-learning/scripts/fibonacci.sh ${env.NUMBER}")
+                sh("./jenkins-learning/scripts/fibonacci.sh ")
             }
         }
         stage('Full path') {
             steps {
-                sh("${env.WORKSPACE}/jenkins-learning/scripts/fibonacci.sh ${env.NUMBER}")
+                sh("${env.WORKSPACE}/jenkins-learning/scripts/fibonacci.sh ")
             }
         }
         stage('Change directory') {
             steps {
                 dir("${env.WORKSPACE}/jenkins-learning/scripts"){
-                    sh("./fibonacci.sh ${env.NUMBER}")
+                    sh("./fibonacci.sh ")
                 }
             }
         }
